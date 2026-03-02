@@ -5,7 +5,7 @@ RUN npm install
 COPY busybees.ui/ .
 RUN npm run build --configuration=production
 
-FROM mcr.microsoft.com/dotnet.sdk:9.0 AS build-backend
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build-backend
 WORKDIR /src
 COPY busybees.api/busybees.api.csproj ./busybees.api/
 RUN dotnet restore ./busybees.api/busybees.api.csproj
