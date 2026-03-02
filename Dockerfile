@@ -1,11 +1,11 @@
-FROM node:20 as build-frontend
+FROM node:20 AS build-frontend
 WORKDIR /src/busybees.ui
 COPY busybees.ui/package*.json ./
 RUN npm install
 COPY busybees.ui/ .
 RUN npm run build --configuration=production
 
-FROM cmr.microsoft.com/dotnet.sdk:9.0 AS build-backend
+FROM mcr.microsoft.com/dotnet.sdk:9.0 AS build-backend
 WORKDIR /src
 COPY busybees.api/busybees.api.csproj ./busybees.api/
 RUN dotnet restore ./busybees.api/busybees.api.csproj
