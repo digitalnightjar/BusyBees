@@ -1,0 +1,70 @@
+.busy-bees-container {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive; /* Fun fonts */
+  background-color: #fdfae6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #4a3c00;
+  font-size: 3rem;
+  text-shadow: 2px 2px #ffd700;
+}
+
+.hive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns side-by-side */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.child-hive {
+  border-radius: 40px;
+  padding: 20px;
+  border: 8px solid #4a3c00;
+  min-height: 70vh;
+}
+
+.honey-yellow { background-color: #ffcc33; }
+.pollen-orange { background-color: #ff9933; }
+
+.header-tag {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.chore-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 25px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 8px 0 #888; /* Makes it look like a 3D button */
+  transition: transform 0.1s;
+}
+
+.chore-card:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #888;
+}
+
+.chore-card.is-done {
+  background-color: #a2d149;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.status-icon {
+  margin-right: 15px;
+  font-size: 2rem;
+}
